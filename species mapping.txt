@@ -1,0 +1,152 @@
+mapping = {
+    
+
+    #Meleagris gallopavo
+
+    'Meleagris gallopavo':'Meleagris gallopavo',
+
+    # Chickens
+    'Avian' : 'Chicken',
+    'Gallus gallus': 'Chicken',
+    'Gallus gallus domesticus': 'Chicken',
+    'Poultry': 'Chicken',
+
+    # Ducks
+    'Mallard duck' : 'Duck',
+    'Cairina moschata' : 'Duck',
+    'Anas platyrhynchos f. domestica' : 'Duck',
+    'Anas platyrhynchos': 'Duck',
+    'Anas platyrhynchos var. domesticus': 'Duck',
+    'Anas sp.': 'Duck',
+    'Dabbling duck': 'Duck',
+    'Common teal': 'Duck',
+    'Anas penelope': 'Duck',
+    'Anas crecca': 'Duck',
+    'Anas strepera': 'Duck',
+    'Anas cyanoptera': 'Duck',
+    'Anas zonorhyncha': 'Duck',
+    'Aythya fuligula': 'Duck',
+    'Aythya affinis': 'Duck',
+    'Northern shoveler': 'Duck',
+    'Mareca penelope': 'Duck',
+    'Tadorna tadorna': 'Duck',
+    'Somateria mollissima': 'Duck',
+    'Lophodytes cucullatus': 'Duck',
+    'Anseriformes sp.': 'Duck',
+    'Teal': 'Duck',
+    'Aix galericulata' : 'Duck',
+
+    # Geese
+    'Anser indicus' : 'Goose',
+    'Anser anser': 'Goose',
+    'Anser anser domesticus': 'Goose',
+    'Greylag goose': 'Goose',
+    'Anser brachyrhynchus': 'Goose',
+    'Branta canadensis': 'Goose',
+    'Branta leucopsis': 'Goose',
+    'Branta bernicla': 'Goose',
+    'Anser albifrons': 'Goose',
+    'Anser caerulescens': 'Goose',
+    'Anser rossii': 'Goose',
+    'White-fronted goose': 'Goose',
+    'Domestic goose': 'Goose',
+
+    # Swans
+    'Cygnus olor': 'Swan',
+    'Cygnus cygnus': 'Swan',
+    'Cygnus columbianus': 'Swan',
+    'Cygnus atratus': 'Swan',
+    'Cygnus melancoryphus': 'Swan',
+    'Whooper swan': 'Swan',
+
+    # Gulls
+    'Gull': 'Gull',
+    'Larus argentatus': 'Gull',
+    'Larus marinus': 'Gull',
+    'Herring gull': 'Gull',
+    'Larus ridibundus': 'Gull',
+    'Larus canus': 'Gull',
+    'Larus': 'Gull',
+    'Larus fuscus': 'Gull',
+    'Larus dominicanus': 'Gull',
+    'Larus cachinnans': 'Gull',
+    'Larus smithsonianus': 'Gull',
+    'Larus melanocephalus': 'Gull',
+    'Larus delawarensis': 'Gull',
+    'Chroicocephalus ridibundus': 'Gull',
+    'Chroicocephalus': 'Gull',
+    'Leucophaeus': 'Gull',
+
+    # Falcons
+    'Falcon': 'Falcon',
+    'Falco peregrinus': 'Falcon',
+    'Falco tinnunculus': 'Falcon',
+    'Falco': 'Falcon',
+
+    # Eagles
+    'Eagle': 'Eagle',
+    'Halietus albicilla': 'Eagle',
+    'Haliaeetus leucocephalus': 'Eagle',
+    'Nisaetus nipalensis': 'Eagle',
+    'Buteo buteo': 'Eagle',
+    'Buteo jamaicensis': 'Eagle',
+    'Buteo lineatus': 'Eagle',
+    'Accipiter gentilis': 'Eagle',
+    'Accipiter nisus': 'Eagle',
+
+    # Pigeons/Doves
+    'Pigeon': 'Pigeon',
+    'Dove': 'Pigeon',
+
+    # Cormorants
+    'Cormorant': 'Cormorant',
+
+    # Penguins
+    'Penguin': 'Penguin',
+
+    # Other birds
+    'Crow': 'Crow',
+    'Passerine': 'Passerine',
+    'Partridge': 'Partridge',
+    'Quail': 'Quail',
+    'Pheasant': 'Pheasant',
+    'Phasianus colchicus': 'Pheasant',
+    'Phasanius colchicus': 'Pheasant',
+    'Pica': 'Crow',
+
+    # Seabirds
+    'Sterna hirundo': 'Seabird',
+    'Sterna sandvicensis': 'Seabird',
+    'Sterna paradisaea': 'Seabird',
+    'Rissa tridactyla': 'Seabird',
+    'Rynchops niger': 'Seabird',
+    'Larosterna inca': 'Seabird',
+    'Shearwater': 'Seabird',
+
+    # Other waterbirds
+    'Wild bird': 'Wild bird / Wild birds',
+    'Wild birds': 'Wild bird / Wild birds',
+    'Wild waterfowl': 'Wild bird / Wild birds',
+    'Calidris alba': 'Shorebird',
+    'Calidris canutus': 'Shorebird',
+    'Eurasian curlew': 'Shorebird',
+    'Numenius arquata': 'Shorebird',
+    'Curlew': 'Shorebird',
+
+    # Others
+
+    'Numida meleagris': 'Guineafowl',
+    'Ostrich': 'Ostrich',
+    'Sacred ibis': 'Sacred ibis',
+    'Guinea fowl': 'Guineafowl',
+    'Guineafowl': 'Guineafowl',
+    'Gallinula chloropus': 'Waterfowl',
+    'Podiceps cristatus': 'Grebe',
+    'Tachybaptus ruficollis': 'Grebe',
+    'Coturnix sp.': 'Quail',
+    'Peafowl': 'Peafowl',
+    'Meleagris gallopavo': 'Turkey',
+    'Pavo cristatus' : 'Peafowl',
+    'Phasanius sp.' : 'Pheasant',
+    'Phasianus' : 'Pheasant'
+}

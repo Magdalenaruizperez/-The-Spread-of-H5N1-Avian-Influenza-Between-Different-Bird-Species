@@ -1,0 +1,19 @@
+# # 1. Set up species migration start/end points
+# migration_paths = {
+#     "Duck": [("Canada", "Mexico"), ("Northern Europe", "Africa")],
+#     "Goose": [("Arctic", "Southern USA"), ("Arctic", "Africa")],
+#     "Gull": [("Arctic", "Temperate Coasts")],
+#     "Swan": [("Iceland", "United Kingdom"), ("Arctic", "Eastern USA")],
+#     "Eagle": [("Central Asia", "Africa"), ("Alaska", "USA")],
+#     "Falcon": [("East Asia", "Southern Africa")],
+#     "Seabird": [("Southern Ocean", "Southern Ocean (circumpolar)")],
+#     "Penguin": [("Antarctica", "Antarctica (seasonal movement)")],
+#     "Shorebird": [("Arctic Canada", "Argentina")],
+#     "Passerine": [("Northern USA", "Central America"), ("Europe", "Africa")],
+#     "Cormorant": [("Europe", "North Africa")],
+#     "Grebe": [("Western Canada", "Southern California")],
+#     "Quail": [("Europe", "Africa")],
+#     "Dove": [("USA", "Mexico"), ("Europe", "Africa")],
+#     "Sacred ibis": [("Africa Wetlands", "Africa Wetlands (seasonal)")],
+#     "Waterfowl": [("North America", "Southern USA and Mexico")],
+# }
