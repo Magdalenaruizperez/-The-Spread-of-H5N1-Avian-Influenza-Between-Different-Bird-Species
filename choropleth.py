@@ -71,5 +71,5 @@ ax.set_title("Avian Influenza 2021 Outbreak", fontsize=20)
 ax.set_axis_off()
 
 # 12. Save figure
-plt.savefig("C:/Users/maggi/Documents/1 - Bioinformatics/choropleth/GISAID/split_by_year_/2021/choropleth 2021.png", dpi=300, bbox_inches='tight')
+plt.savefig("outputs/choropleth_2021.png", dpi=300, bbox_inches='tight')
 plt.show()
