@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# 1. Load your table
-df = pd.read_csv('host_appearances.csv')  # Change the filename if needed
+# 1. Load table
+df = pd.read_csv('host_appearances.csv') 
 
 # 2. Select the year you want 
 selected_year = 2021
