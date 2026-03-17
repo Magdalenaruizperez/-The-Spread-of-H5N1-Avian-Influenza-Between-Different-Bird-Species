@@ -1,7 +1,7 @@
 
 #This code finds out how many counts are per date. 
-#Exports a new csv file with the location flock size and collection date
-#this is important for the plotting code 
+#Exports a new CSV file with the location, flock size, and collection date
+#This is important for the plotting code 
 
 #Also exports an csv file with the type of host and 
 #the amount of time it appears 
@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import contextily as ctx
 
 
-# 1. Load your Excel or CSV file
+# 1. Load Excel or CSV file
 #outbreak = pd.read_csv("raw-data-gisaid_epiflu_isolates.csv")  # or use read_excel() if Excel file .xls
 
 outbreak = pd.read_csv('gisaid_epiflu_isolates_full_period.csv', encoding='latin1')
@@ -41,11 +41,11 @@ outbreak['Location'] = outbreak['Location'].apply(adjust_location)
 
 
 
-# 3. Clean case and spaces
+# 4. Clean case and spaces
 outbreak['Location'] = outbreak['Location'].str.strip().str.lower()
 world['NAME'] = world['NAME'].str.strip().str.lower()
 
-# 4. Apply corrections to outbreak country names
+# 5. Apply corrections to outbreak country names
 
 
 corrections = {
@@ -146,12 +146,12 @@ corrections = {
 
 outbreak['Location'] = outbreak['Location'].replace(corrections)
 
-# 5. Drop rows where Country is still missing (NaN)
+# 6. Drop rows where Country is still missing (NaN)
 outbreak = outbreak.dropna(subset=['Location'])
 
-# 6. OPTIONAL: Check if any countries still do not match
+# 7. OPTIONAL: Check if any countries still do not match
 missing_countries = outbreak[~outbreak['Location'].isin(world['NAME'])]['Location'].unique()
-print("❌ Missing countries after corrections:")
+print(" Missing countries after corrections:")
 print(missing_countries)
 
 #Species mapping 
@@ -322,38 +322,36 @@ outbreak['Host'] = outbreak['Host'].replace(mapping)
 #  Extract Year from 'Collection_Date' 
 outbreak['Year'] = pd.to_datetime(outbreak['Collection_Date'], errors='coerce').dt.year
 
-# 10. Group by Host and Year and count how many times each appears (after cleaning)
+# 8. Group by Host and Year and count how many times each appears (after cleaning)
 #animal_counts = outbreak.groupby(['Host', 'Year']).size().reset_index(name='Count')
 animal_period = outbreak.groupby(['Host', 'Year']).size().reset_index(name='Count')
 
 print(animal_counts)
 
-# 11. Save to CSV - works for migration_summary 
+# 9. Save to CSV - works for migration_summary 
 animal_period.to_csv("full period/Animal_period.csv", index=False)
 
-print("✅ Cleaned animal counts with year saved successfully.")
+print(" Cleaned animal counts with year saved successfully.")
 
 
 
-#  Group by Location, Host, and Year (works for individual heatmaps)
+# 10. Group by Location, Host, and Year (works for individual heatmaps)
 host_appearances = outbreak.groupby(['Location', 'Host', 'Year']).size().reset_index(name='Appearances')
 
-#  Save to a CSV file
+# 11. Save to a CSV file
 host_appearances.to_csv("full period/host_appearances.csv", index=False)
 
-print("✅ Host appearances by country and year saved successfully.")
-
-
+print(" Host appearances by country and year saved successfully.")
 print("Host appearances by country saved'")
 
 
-# Group by Location and Collection Date, and count the number of Hosts
+# 12. Group by Location and Collection Date, and count the number of Hosts
 flock_size_outbreak = outbreak.groupby(['Location', 'Collection_Date']).agg({'Host': 'count'}).reset_index()
 
-# # Rename the 'Host' column to 'Flock Size'
+# 13. Rename the 'Host' column to 'Flock Size'
 flock_size_outbreak = flock_size_outbreak.rename(columns={'Host': 'Flock Size'})
 
-# # Save to new CSV - I need this for ploting the choropleth
+# 14. Save to new CSV - Needed for plotting the choropleth
 flock_size_outbreak.to_csv("/flock_size_FP_outbreak.csv", index=False)
 
 print("File created successfully")
@@ -366,8 +364,8 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 
-# Load your table
-df = pd.read_csv('Animal_period.csv')  # ⬅️ Replace with your file path!
+# Load table
+df = pd.read_csv('Animal_period.csv')  # Replace with your file path!
 
 # Pivot: Years as index, Hosts as columns
 pivot = df.pivot_table(index='Year', columns='Host', values='Count', aggfunc='sum', fill_value=0)
