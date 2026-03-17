@@ -1,4 +1,4 @@
-# 🦅 Avian Influenza GISAID Pipeline
+#  Avian Influenza GISAID Pipeline
 
 A bioinformatics pipeline for analysing Avian Influenza (H5N1) outbreak data sourced from [GISAID](https://www.gisaid.org/). The pipeline cleans and standardises raw isolate data, then branches into geospatial visualisation, migration analysis, and network-based epidemiology.
 
@@ -25,13 +25,13 @@ A bioinformatics pipeline for analysing Avian Influenza (H5N1) outbreak data sou
 
 ---
 
-## ⚙️ Pipeline Execution Order
+##  Pipeline Execution Order
 
 The pipeline has a single entry point and then splits into parallel tracks. Follow the order below:
 
 ### Step 1 — Data Ingestion & Cleaning
 **Script:** `Gisaid.py`  
-**Input:** `gisaid_epiflu_isolates_full_period.csv` (raw GISAID download)  
+**Input:** `gisaid_epiflu_isolates_full_period.csv` (raw GISAID download-available in this repository)  
 **Outputs:**
 - `Animal_period.csv` — host species counts per year
 - `host_appearances.csv` — host counts per country per year
@@ -160,7 +160,7 @@ Raw data is sourced from GISAID's EpiFlu database. The expected file is:
 gisaid_epiflu_isolates_full_period.csv
 ```
 
-This file is not included in this repository. You must download it directly from [GISAID](https://www.gisaid.org/) (requires a free registered account).
+This file is included in this repository. Alternatively, download it directly from [GISAID](https://www.gisaid.org/) (requires a free registered account).
 
 ---
 
