@@ -38,7 +38,7 @@ migration_paths = {
 
 
 # 2. Load your world shapefile
-world = gpd.read_file("C:/Users/maggi/Documents/1 - Bioinformatics/choropleth/GISAID/world_shapefile/ne_110m_admin_0_countries.shp")
+world = gpd.read_file("world_shapefile/ne_110m_admin_0_countries.shp")
 
 # 3. Define center coordinates for locations
 center_coords = {
