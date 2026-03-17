@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-# 1. Load your CSV
+# 1. Load CSV
 df = pd.read_csv("gisaid_epiflu_isolates_full_period.csv", encoding="latin1")  # Adjust filename if needed
 
 # 2. Extract only the Country from the Location column
@@ -27,7 +27,7 @@ summary = df.groupby('Location').agg({
 # 4. Save to new CSV
 summary.to_csv("Country_Reported_Values.csv", index=False, encoding="utf-8")
 
-print("✅ New file created: 'Missing_data_Country_Reported_Values.csv'")
+print(" New file created: 'Missing_data_Country_Reported_Values.csv'")
 
 
 
@@ -41,7 +41,7 @@ print("✅ New file created: 'Missing_data_Country_Reported_Values.csv'")
 # → How many countries submitted incomplete information (i.e., missing 1+ of the 3 fields)?
 
 
-# 1. Load your cleaned CSV
+# 1. Load cleaned CSV
 df = pd.read_csv("Country_Reported_Values.csv")
 
 # 2. Get list of countries
@@ -93,11 +93,11 @@ summary_df = pd.DataFrame({
 # 6. Save to a new CSV
 summary_df.to_csv("Summary_Country_Submissions.csv", index=False)
 
-print("\n✅ Summary table created successfully: 'Summary_Country_Submissions.csv'")
+print("\n Summary table created successfully: 'Summary_Country_Submissions.csv'")
 print(summary_df)
 
 
 
-# ✅ Summary table created successfully: 'Summary_Country_Submissions.csv'
+#  Summary table created successfully: 'Summary_Country_Submissions.csv'
 #    Reported_All_Three  Reported_Incomplete  ...  Reported_Animal_Health_Status  Reported_Domestic_Status
 # 0                 504                 1428  ...                            790                       720
