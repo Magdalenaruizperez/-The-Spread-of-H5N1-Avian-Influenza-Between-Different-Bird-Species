@@ -168,7 +168,6 @@ This file is included in this repository. Alternatively, download it directly fr
 
 - `Gisaid.py` and `host_location.py` both independently re-clean the raw GISAID CSV using the same corrections and species mapping. If you update `countries_manual_correction_mapping.txt` or `species_mapping.txt`, **you must update both scripts** to keep them in sync.
 - `migration_analysis.py` contains a section that references a variable `df` that must be loaded manually (either `migratory_detailed.csv` or `nonmigratory_detailed.csv`) — see inline comments in the script.
-- File paths in several scripts are hardcoded to a local Windows directory. Update these before running.
 
 ---
 
