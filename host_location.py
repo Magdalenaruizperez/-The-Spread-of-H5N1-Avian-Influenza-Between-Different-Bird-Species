@@ -7,7 +7,7 @@ import contextily as ctx
 
 
 # 1. Load your Excel file
-outbreak = pd.read_csv("gisaid_epiflu_isolates_full_period.csv")  # <-- this used GISAID raw data / replace with your file name
+outbreak = pd.read_csv("gisaid_epiflu_isolates_full_period.csv")  # <-- this used GISAID raw data 
 
 
 # 2. Load world countries shapefile
@@ -145,7 +145,7 @@ outbreak = outbreak.dropna(subset=['Location'])
 
 # 6. OPTIONAL: Check if any countries still do not match
 missing_countries = outbreak[~outbreak['Location'].isin(world['NAME'])]['Location'].unique()
-print("❌ Missing countries after corrections:")
+print(" Missing countries after corrections:")
 print(missing_countries)
 
 
@@ -305,7 +305,6 @@ mapping = {
     'Phasianus' : 'Pheasant'
 }
 
-# print(df['Host'].unique())
 # print(df['Host'].nunique())
 
 
@@ -313,18 +312,18 @@ mapping = {
 outbreak['Host'] = outbreak['Host'].replace(mapping)
 
 
-# # 2. Group by Host and collect the list of unique countries
+#  Group by Host and collect the list of unique countries
 host_countries = outbreak.groupby('Host')['Location'].unique().reset_index()
 
-# # 3. Rename the columns nicely
+#  Rename the columns nicely
 # host_countries.columns = ['Host', 'Countries']
 
 
-# 4. Now explode: one row per (Host, Location)
+# Now explode: one row per (Host, Location)
 host_countries = host_countries.explode('Location').reset_index(drop=True)
 
 
-# 4. Define your list of migratory species
+#  Define your list of migratory species
 
 
 
@@ -352,13 +351,12 @@ print(" New file created successfully!")
 
 #Analysis 1: Count how many countries each species appears in
 # This shows:
-
 #Chicken appears in 60+ countries, Falcon appears in 10+, etc.
 
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 1. Load your expanded table
+# 1. Load expanded table
 df = pd.read_csv('host_location.csv')
 
 # Capitalize the first letter of each word in 'Country'
@@ -368,10 +366,10 @@ df['Location'] = df['Location'].str.title()
 # 2. Group by Host and count how many unique countries
 species_country_count = df.groupby('Host')['Location'].nunique().reset_index(name='Country Count')
 
-# 3. Sort for nicer plot
+# 3. Sort for plot
 species_country_count = species_country_count.sort_values('Country Count', ascending=False)
 
-4. Plot
+#4. Plot
 plt.figure(figsize=(14, 7))
 plt.barh(species_country_count['Host'], species_country_count['Country Count'], color='salmon')
 plt.xlabel('Number of Countries')
@@ -408,7 +406,7 @@ country_species_count = df.groupby('Location')['Host'].nunique().reset_index(nam
 # 2. Sort
 top10_countries = country_species_count.sort_values('Species Richness', ascending=False).head(10)
 
-3. Plot
+#3. Plot
 plt.figure(figsize=(12, 6))
 plt.barh(top10_countries['Location'], top10_countries['Species Richness'], color='salmon')
 plt.xlabel('Number of Unique Species')
@@ -454,7 +452,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# 1. Load your data
+# 1. Load data
 df = pd.read_csv("host_location.csv")  
 
 # 2. Create a Pivot Table: Species (rows) x Countries (columns)
