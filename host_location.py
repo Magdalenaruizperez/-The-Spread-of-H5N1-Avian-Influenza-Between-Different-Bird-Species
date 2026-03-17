@@ -11,7 +11,7 @@ outbreak = pd.read_csv("gisaid_epiflu_isolates_full_period.csv")  # <-- this use
 
 
 # 2. Load world countries shapefile
-world = gpd.read_file("C:/Users/maggi/Documents/1 - Bioinformatics/choropleth/world_shapefile/ne_110m_admin_0_countries.shp")
+world = gpd.read_file("world_shapefile/ne_110m_admin_0_countries.shp")
 
 # 3. Adjust the 'Country' field to keep only the first two parts
 
@@ -497,7 +497,7 @@ from scipy.cluster.hierarchy import dendrogram, linkage
 import numpy as np
 
 # 1. Load the cleaned expanded table (Species - Country - Migratory?)
-data = pd.read_csv("C:/Users/maggi/Documents/1 - Bioinformatics/choropleth/GISAID/migration/analysis by host location/host_location.csv")
+data = pd.read_csv("host_location.csv")
 
 # Capitalize country names for neatness
 data['Location'] = data['Location'].str.title()
